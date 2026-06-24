@@ -1,0 +1,125 @@
+*, html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ini disebut css variable */
+:root {
+  --color-primary: #E1DCC9;
+  --color-secondary: #412D15;
+  --txt-primary: #2d2d2d;
+  --txt-secondary: #8a6fff;
+  --font-header: "Silkscreen", sans-serif;
+  --font-desc: "Unica One", sans-serif;
+  --icons-bg-primary: #1F150C;
+  --btn-bg-primary: #1F150C;
+  --btn-bg-secondary: #412D15;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  /* background-color: var(--txt-secondary); */
+  background-image: url('assets/imageBgjpg.jpg');
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.card {
+  text-align: center;
+  color: var(--txt-primary);
+  border: 1px solid var(--txt-primary);
+  background-color: var(--color-primary);
+  padding: 32px;
+  margin: 8px;
+  width: 100%;
+  max-width: 250px;
+  box-shadow: 0px 7px 10px 0px rgba(21, 11, 26, 0.432);
+  transition: .3s ease-in-out;
+}
+
+.title {
+  font-family: var(--font-header);
+  font-weight: 400;
+}
+
+.icons {
+  margin-top: 10px;
+  font-size: 30px;
+  color: var(--icons-bg-primary);
+  transition: .3s ease-in-out;
+}
+
+.description {
+  margin-top: 10px;
+  font-family: var(--font-desc);
+}
+
+.btn {
+  border: none;
+  width: 100%;
+  padding: 8px;
+  border-radius: 2px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: var(--font-desc);
+  margin-top: 10px;
+  background-color: var(--btn-bg-primary);
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--btn-bg-secondary);
+  color: var(--color-primary);
+  transform: rotate(1deg);
+  transition: .3s ease-in-out;
+}
+
+@media screen and (max-width: 1327px) and (min-width:664px) {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .wrapper {
+    min-height: unset;
+    height: 55vh;
+  }
+
+  .card {
+    min-width: 35%;
+    margin: 0px 8px;
+  }
+
+}
+
+@media screen and (max-width:425px) {
+  .card {
+    max-width: none;
+  }
+
+  .description {
+    font-size: 23px;
+  }
+
+  .btn {
+    width: 45%;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:663px) {
+  .container {
+    background-color: antiquewhite;
+  }
+}
